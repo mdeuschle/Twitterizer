@@ -119,13 +119,17 @@ self.textView.text =[[tweetArray valueForKey:@"description"] componentsJoinedByS
         else
         {
             NSMutableString *string = [NSMutableString new];
-            NSUInteger *length = [NSString stringWithFormat:@"%@", tweetArray[i]].length;
+            NSUInteger length = [NSString stringWithFormat:@"%@", tweetArray[i]].length;
             for(int e = 0; e < length; e ++)
             {
-                [string appendString:[NSString stringWithFormat:@"%c",[[NSString stringWithFormat:@"#%@", tweetArray[i]] characterAtIndex:length - e - 1]]];
+                [string appendString:[NSString stringWithFormat:@"%c",[[NSString stringWithFormat:@"%@", tweetArray[i]] characterAtIndex:length - e - 1]]];
             }
+            
+            tweetArray[i] = string;
         }
     }
+    
+    self.textView.text =[[tweetArray valueForKey:@"description"] componentsJoinedByString:@" "];
 
 }
 
