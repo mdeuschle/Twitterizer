@@ -8,7 +8,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kIA-cS-RVQ"/>
@@ -32,7 +31,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-E4-v0q">
                                 <rect key="frame" x="180" y="35" width="240" height="140"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter tweet here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-mn-VLY">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" text="Enter tweet here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-mn-VLY">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="140"/>
                                         <color key="backgroundColor" red="0.25490196078431371" green="0.59215686274509804" blue="0.91764705882352937" alpha="0.59582435344827589" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -61,15 +60,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-1B-smF">
+                                <rect key="frame" x="264" y="285" width="72" height="30"/>
+                                <state key="normal" title="#Hashtag!"/>
+                                <connections>
+                                    <action selector="hashtagButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvZ-GH-pJX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qe1-E4-v0q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xE-yE-Im8"/>
                             <constraint firstItem="Xra-fr-LTS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBh-NB-Cqv"/>
                             <constraint firstItem="qe1-E4-v0q" firstAttribute="top" secondItem="kIA-cS-RVQ" secondAttribute="bottom" constant="15" id="KRo-zM-SUg"/>
+                            <constraint firstItem="mxg-1B-smF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kk2-CS-lBm"/>
                             <constraint firstItem="x6K-xq-jVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vaz-h9-30b"/>
                             <constraint firstItem="Xra-fr-LTS" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="64" id="iXl-el-465"/>
                             <constraint firstItem="x6K-xq-jVs" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="19" id="nCT-MH-BIQ"/>
+                            <constraint firstItem="mxg-1B-smF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="poc-8o-upW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -77,6 +85,7 @@
                         <outlet property="textView" destination="4OY-mn-VLY" id="z2G-ao-deZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="291" y="197"/>
         </scene>

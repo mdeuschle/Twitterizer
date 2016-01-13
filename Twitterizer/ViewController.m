@@ -71,5 +71,14 @@
     self.textView.text = shortTweet;
 
 }
+- (IBAction)hashtagButtonPressed:(UIButton *)sender {
+
+    NSString *tweet = self.textView.text;
+    NSMutableArray *tweetArray = [tweet componentsSeparatedByString:@" "];
+    for (int i = 1; i < tweetArray.count; i = i + 2) {
+        tweetArray[i]
+    }
+}
+}
 
 @end
