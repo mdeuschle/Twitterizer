@@ -62,20 +62,39 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-1B-smF">
                                 <rect key="frame" x="264" y="285" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="bap-hC-2mW"/>
+                                    <constraint firstAttribute="height" constant="30" id="ehW-5g-4ED"/>
+                                </constraints>
                                 <state key="normal" title="#Hashtag!"/>
                                 <connections>
                                     <action selector="hashtagButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvZ-GH-pJX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CC1-2W-KgX">
+                                <rect key="frame" x="270" y="329" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QS7-Js-fSa"/>
+                                    <constraint firstAttribute="height" constant="30" id="hBF-rN-hbp"/>
+                                </constraints>
+                                <state key="normal" title="!esreveR"/>
+                                <connections>
+                                    <action selector="onReverseButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YS7-Yv-oIz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CC1-2W-KgX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9DR-jL-S0y"/>
                             <constraint firstItem="qe1-E4-v0q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xE-yE-Im8"/>
                             <constraint firstItem="Xra-fr-LTS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBh-NB-Cqv"/>
                             <constraint firstItem="qe1-E4-v0q" firstAttribute="top" secondItem="kIA-cS-RVQ" secondAttribute="bottom" constant="15" id="KRo-zM-SUg"/>
                             <constraint firstItem="mxg-1B-smF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kk2-CS-lBm"/>
+                            <constraint firstItem="mxg-1B-smF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCT-Zh-iMZ"/>
                             <constraint firstItem="x6K-xq-jVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vaz-h9-30b"/>
+                            <constraint firstItem="mxg-1B-smF" firstAttribute="top" secondItem="Xra-fr-LTS" secondAttribute="bottom" constant="16" id="hut-BL-PAy"/>
                             <constraint firstItem="Xra-fr-LTS" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="64" id="iXl-el-465"/>
+                            <constraint firstItem="CC1-2W-KgX" firstAttribute="top" secondItem="mxg-1B-smF" secondAttribute="bottom" constant="14" id="mBc-Dl-MqJ"/>
                             <constraint firstItem="x6K-xq-jVs" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="19" id="nCT-MH-BIQ"/>
                             <constraint firstItem="mxg-1B-smF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="poc-8o-upW"/>
                         </constraints>
