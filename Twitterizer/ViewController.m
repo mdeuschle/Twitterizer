@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -18,11 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)textViewDidChange:(UITextView *)textView
+{
+    self.label.text = [NSString stringWithFormat:@"%lu characters", self.textView.text.length];
+}
+
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView
+{
+    if (    self.textView.text.length = 140;
+) {
+        <#statements#>
+    }
 }
 
 - (IBAction)onTwitterizeTap:(UIButton *)sender
 {
+
     NSString *tweet = self.textView.text;
     
     NSMutableString *shortTweet = [NSMutableString new];
@@ -33,11 +47,17 @@
     
     for (int i = 0; i < length; i++)
     {
-        if ([vowels containsString:[NSString stringWithFormat:@"%c", [tweet characterAtIndex:i] ] ] )
+        if ([vowels containsString:[NSString stringWithFormat:@"%c", [tweet characterAtIndex:i]]])
         {
-            <#statements#>
+            NSLog(@"%c", [tweet characterAtIndex:i]);
+        }
+        else
+        {
+            [shortTweet appendString:[NSString stringWithFormat:@"%c", [tweet characterAtIndex:i]]];
         }
     }
+    self.textView.text = shortTweet;
+
 }
 
 @end
