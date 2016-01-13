@@ -19,20 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 -(void)textViewDidChange:(UITextView *)textView
 {
     self.label.text = [NSString stringWithFormat:@"%lu characters", self.textView.text.length];
-}
-
--(BOOL)textViewShouldEndEditing:(UITextView *)textView
-{
-    if (    self.textView.text.length = 140;
-) {
-        <#statements#>
+    
+    //[self textViewShouldEndEditing:self.textView];
+    
+    if (self.textView.text.length == 140)
+    {
+        textView.editable = NO;
     }
 }
+
+//-(BOOL)textViewShouldEndEditing:(UITextView *)textView
+//{
+//    if (self.textView.text.length == 140)
+//    {
+//        return YES;
+//    }
+//    else
+//    {
+//        return NO;
+//    }
+//}
 
 - (IBAction)onTwitterizeTap:(UIButton *)sender
 {

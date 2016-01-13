@@ -8,69 +8,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="kIA-cS-RVQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="xSb-zr-v1a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter tweet here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-mn-VLY">
-                                <rect key="frame" x="180" y="45" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-fr-LTS">
+                                <rect key="frame" x="267" y="239" width="67" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="dlC-9b-aqv"/>
-                                    <constraint firstAttribute="height" constant="128" id="ndJ-mX-Dde"/>
+                                    <constraint firstAttribute="height" constant="30" id="0kh-ag-Rgp"/>
+                                    <constraint firstAttribute="width" constant="67" id="7an-nG-bQZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kbl-Xa-Euw"/>
-                                </connections>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-fr-LTS">
-                                <rect key="frame" x="229" y="240" width="67" height="30"/>
                                 <state key="normal" title="Twitterize"/>
                                 <connections>
                                     <action selector="onTwitterizeTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTL-Ks-sXt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6K-xq-jVs">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qe1-E4-v0q">
+                                <rect key="frame" x="180" y="35" width="240" height="140"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter tweet here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-mn-VLY">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="140"/>
+                                        <color key="backgroundColor" red="0.25490196078431371" green="0.59215686274509804" blue="0.91764705882352937" alpha="0.59582435344827589" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Bbv-ok-c5W"/>
+                                            <constraint firstAttribute="width" constant="240" id="mti-mV-V6D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="kbl-Xa-Euw"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="U6q-kv-lRp"/>
+                                    <constraint firstAttribute="width" constant="240" id="d3q-48-J3r"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6K-xq-jVs">
+                                <rect key="frame" x="180" y="194" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4j9-OJ-GJg"/>
+                                    <constraint firstAttribute="width" constant="240" id="VmM-Om-71k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="179" y="289" width="42" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4OY-mn-VLY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="I0J-oy-4u0"/>
-                            <constraint firstItem="4OY-mn-VLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUl-7W-MgB"/>
+                            <constraint firstItem="qe1-E4-v0q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xE-yE-Im8"/>
+                            <constraint firstItem="Xra-fr-LTS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBh-NB-Cqv"/>
+                            <constraint firstItem="qe1-E4-v0q" firstAttribute="top" secondItem="kIA-cS-RVQ" secondAttribute="bottom" constant="15" id="KRo-zM-SUg"/>
+                            <constraint firstItem="x6K-xq-jVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vaz-h9-30b"/>
+                            <constraint firstItem="Xra-fr-LTS" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="64" id="iXl-el-465"/>
+                            <constraint firstItem="x6K-xq-jVs" firstAttribute="top" secondItem="qe1-E4-v0q" secondAttribute="bottom" constant="19" id="nCT-MH-BIQ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="x6K-xq-jVs"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="x6K-xq-jVs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="label" destination="x6K-xq-jVs" id="7sm-tJ-he0"/>
                         <outlet property="textView" destination="4OY-mn-VLY" id="z2G-ao-deZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="198"/>
+            <point key="canvasLocation" x="291" y="197"/>
         </scene>
     </scenes>
 </document>
