@@ -114,14 +114,16 @@ self.textView.text =[[tweetArray valueForKey:@"description"] componentsJoinedByS
         if ([tweetArray[i] hasPrefix:@"#"])
         {
             NSLog(@"This gets printed if it's already hashtagged");
-            for(int e = 0; e < [NSString stringWithFormat:@"@%@", tweetArray[i]].length; e ++)
-            {
-            tweetArray[i] = @"i";
-            }
+
         }
         else
         {
-            tweetArray[i] = [NSString stringWithFormat:@"#%@", tweetArray[i]];
+            NSMutableString *string = [NSMutableString new];
+            NSUInteger *length = [NSString stringWithFormat:@"%@", tweetArray[i]].length;
+            for(int e = 0; e < length; e ++)
+            {
+                [string appendString:[NSString stringWithFormat:@"%c",[[NSString stringWithFormat:@"#%@", tweetArray[i]] characterAtIndex:length - e - 1]]];
+            }
         }
     }
 
